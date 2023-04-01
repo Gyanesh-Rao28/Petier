@@ -434,13 +434,12 @@ hr {
 
 .menu {
     margin-top: 40px;
-    width: 70%;
+    width: 80%;
     height: 100%;
     border: 2px solid;
 }
 
 #menu-filter {
-    border: 2px solid palevioletred;
     height: 80px;
     width: 100%;
     display: flex;
@@ -455,7 +454,7 @@ hr {
     font-family: 'Signika Negative', sans-serif;
     letter-spacing: 0.09em;
     background-color: transparent;
-    border: 2px solid #8116A6;
+    border: 2px solid #810CA8;
     border-radius: 24px;
     transition: 0.8s;
 }
@@ -467,4 +466,19 @@ hr {
 .selected {
     background-color: #810CA8;
     box-shadow: 0px 0px 20px rgba(129, 12, 168, 0.8);
+}
+
+.menu-grid {
+    border: 2px solid hotpink;
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-box {
+    border: 2px solid chartreuse;
+    height: 250px;
+    margin: 40px 80px;
 }

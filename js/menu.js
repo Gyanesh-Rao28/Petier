@@ -36,6 +36,8 @@ const slider = () => {
 
 // test
 
+// btn switch
+
 const menuFilter = document.getElementById("menu-filter");
 const menuBtn = document.querySelectorAll(".menu-btn");
 
