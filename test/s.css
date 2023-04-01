@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+}
+
+.container-box {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    position: absolute;
+}
+
+.slide {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: 0.8s;
+}
+
+#slide1 {
+    background-image: url('/imgs/dogs/karsten.jpg');
+}
+
+#slide2 {
+    background-image: url('/imgs/dogs/ilya.jpg');
+    left: 100%;
+}
+
+#slide3 {
+    background-image: url('/imgs/dogs/joe.jpg');
+    left: 200%;
+}
+
+.btn {
+    z-index: 99;
+    top: 50%;
+}
+
+#left-btn {
+    position: absolute;
+    left: 0;
+}
+
+#right-btn {
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,470 @@
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Pangolin', cursive;
+font-family: 'Signika Negative', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Pangolin&family=Signika+Negative&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #2D033B;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.landing-page {
+    height: 60vh;
+    background-color: #2D033B;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    /* position: fixed;
+    z-index: 999;
+    background-color: #2D033B; */
+}
+
+.logo {
+    font-family: 'Pangolin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    /* margin-left: 50px; */
+    line-height: 112px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #E5B8F4;
+}
+
+
+.nav-center {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    transition: 0.8s;
+}
+
+.nav-btn:hover {
+    color: #FDA70F;
+}
+
+#login-btn {
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, #C147E9 0%, #A029C8 51%, #810CA8 88.09%);
+    border-radius: 33px;
+    border: none;
+    transition: 0.8s;
+}
+
+#login-btn:hover {
+    box-shadow: 0px 0px 20px rgba(129, 12, 168, 0.8);
+    border-radius: 0;
+}
+
+/* silder */
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+}
+
+.container-box {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slide {
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: 0.8s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#slide1 {
+    background: rgba(185, 128, 240, 0.81);
+}
+
+#slide2 {
+    background-color: #FDA70F;
+    left: 100%;
+}
+
+#slide3 {
+    background: rgba(185, 128, 240, 0.81);
+    left: 200%;
+}
+
+.btn {
+    z-index: 99;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+}
+
+#left-btn {
+    position: absolute;
+    left: 0;
+}
+
+#right-btn {
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.slide-content {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    /* border: 2px solid cyan; */
+}
+
+.content-text {
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.content-text h1 {
+    font-family: 'Signika Negative', sans-serif;
+    text-transform: capitalize;
+    color: #FDA70F;
+    font-size: 48px;
+}
+
+.content-text p {
+    font-family: 'Karla', sans-serif;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.05em;
+    /* font-weight: 700; */
+    line-height: 1.6pc;
+}
+
+#learn {
+    background: #8116A6;
+    border: 2px solid #8116A6;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    padding: 7px 14px;
+    letter-spacing: 0.2em;
+    transition: 0.8s;
+}
+
+#learn:hover {
+    transform: scale(0.9);
+}
+
+#slide-img img {
+    right: 0;
+    position: absolute;
+}
+
+/* grid photo section */
+
+section {
+    /* border: 2px solid white; */
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layout {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(300px, auto-fill);
+}
+
+.grid-box {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    position: relative;
+    margin: 10px;
+    background-color: brown;
+    border-radius: 32px;
+}
+
+#all {
+    position: relative;
+    grid-row: span 1;
+    grid-column: span 1;
+    background: url('/imgs/dogs/lui.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 0px 20px rgba(129, 12, 168, 0.8));
+}
+
+.upper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 32px;
+}
+
+.upper-text {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    left: 120px;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.upper h1 {
+    position: absolute;
+    font-size: 42px;
+    width: 50%;
+    left: 15px;
+    top: 50px;
+
+}
+
+.upper-text p {
+    width: 42%;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: #2D033B;
+}
+
+.shop {
+    margin-top: 10px;
+    padding: 7px 14px;
+    border: 2px solid transparent;
+    background-color: #8116A6;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.8s;
+}
+
+.shop:hover {
+    border: 2px solid #8116A6;
+    background-color: transparent;
+}
+
+#cat {
+    grid-row: span 1;
+    grid-column: span 2;
+    background: url('/imgs/cat/kao.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 0px 20px rgba(129, 12, 168, 0.8));
+}
+
+#cat h1 {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+#cat button {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+
+#bird {
+    grid-row: span 2;
+    grid-column: span 1;
+    background: url('/imgs/bird/kevin.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 0px 20px rgba(129, 12, 168, 0.8));
+}
+
+#bird h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#bird span {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#dog {
+    grid-row: span 1;
+    grid-column: span 3;
+    background: url('/imgs/dogs/joe.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 0px 20px rgba(129, 12, 168, 0.8));
+}
+
+#dog h1 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+
+}
+
+#dog p {
+    font-size: 20px;
+    position: absolute;
+    top: 125px;
+    left: 100px;
+    color: #FDA70F;
+}
+
+#dog button {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.shop2 {
+    margin-top: 10px;
+    padding: 7px 14px;
+    border: 2px solid transparent;
+    background-color: #8116A6;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.8s;
+}
+
+.shop2:hover {
+    border: 2px solid #8116A6;
+    background-color: transparent;
+    /* color: #8116A6; */
+}
+
+/* menu page */
+
+.menu-page {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-head {
+    height: 10vh;
+    width: 85%;
+    font-size: 4rem;
+    font-family: 'Signika Negative', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+hr {
+    width: 30%;
+    height: 2px;
+}
+
+.menu {
+    margin-top: 40px;
+    width: 70%;
+    height: 100%;
+    border: 2px solid;
+}
+
+#menu-filter {
+    border: 2px solid palevioletred;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-btn {
+    padding: 2px 16px;
+    text-transform: uppercase;
+    font-family: 'Signika Negative', sans-serif;
+    letter-spacing: 0.09em;
+    background-color: transparent;
+    border: 2px solid #8116A6;
+    border-radius: 24px;
+    transition: 0.8s;
+}
+
+.menu-btn:hover {
+    box-shadow: 0px 0px 20px rgba(129, 12, 168, 0.8);
+}
+
+.selected {
+    background-color: #810CA8;
+    box-shadow: 0px 0px 20px rgba(129, 12, 168, 0.8);
+}
