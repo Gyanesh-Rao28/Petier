@@ -67,7 +67,7 @@
               </p>
               <button id="learn">Learn more...</button>
             </div>
-            <span id="slide-img"><img src="/imgs/pngs/loan.png" /></span>
+            <span id="slide-img"><img src="/imgs/pngs/karsten.png" /></span>
           </div>
         </div>
         <div class="slide" id="slide3">
@@ -130,6 +130,8 @@
     </div>
   </section>
 
+  <!-- menu -->
+
   <div class="menu-page">
     <h1 class="menu-head">
       <hr>Adopt them
@@ -144,64 +146,90 @@
         <li id="Food" class="menu-btn">food</li>
       </ul>
       <div id="menu-grid">
-        <!-- box1 -->
-        <div class="menu-box">
-          <div class="box-img">
-            <img src="/imgs/dogs/semin.jpg" class="photo">
-          </div>
-          <div class="menu-des">
-            <p>BREED - Basenji</p>
-            <p>Age - 2yr</p>
-            <p>Location - delhi</p>
-            <p>GENDER - FEMALE</p>
-            <button class="menu-more"><img src="/imgs/pngs/arrow.png" style="transform: rotate(-180deg);"></button>
-          </div>
-        </div>
-        <!-- box2 -->
-        <div class="menu-box">
-          <div class="box-img" >
-            <img src="/imgs/dogs/erda.jpg" class="photo">
-          </div>
-          <div class="menu-des">
-            <p>BREED - Basenji</p>
-            <p>Age - 2yr</p>
-            <p>Location - delhi</p>
-            <p>GENDER - FEMALE</p>
-          </div>
-        </div>
-        <!-- box3 -->
-        <div class="menu-box">
-          <div class="box-img">
-            <img src="">
-          </div>
-          <div class="menu-des">
-            <p>BREED - Basenji</p>
-            <p>Age - 2yr</p>
-            <p>Location - delhi</p>
-            <p>GENDER - FEMALE</p>
-          </div>
-        </div>
-        <!-- box4 -->
-        <div class="menu-box">
-          <div class="box-img">
-            <img src="">
-          </div>
-          <div class="menu-des">
-            <p>BREED - Basenji</p>
-            <p>Age - 2yr</p>
-            <p>Location - delhi</p>
-            <p>GENDER - FEMALE</p>
-          </div>
+        <!-- menu-item -->
+      </div>
+      <div id="load">
+        <button id="load-btn"> MORE </button>
       </div>
     </div>
-  </div>
 
-  <script src="js/menu.js"></script>
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
+    <!-- guide -->
+
+    <div class="guide">
+      <h1 class="guide-head">Your pet adoption journey</h1>
+      <div class="guide-main">
+        <div class="guide-content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+          data-aos-offset="0" data-aos-duration="800">
+          <div class="guide-img" id="pet"></div>
+          <p>Simply enter your contact information and receive a call.</p>
+        </div>
+        <div class="guide-content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+          data-aos-offset="0" data-aos-duration="800">
+          <div class="guide-img" id="handshake"></div>
+          <p>
+            Meet your future pet in our shelter, and fall in love with them.
+          </p>
+        </div>
+        <div class="guide-content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+          data-aos-offset="0" data-aos-duration="800">
+          <div class="guide-img" id="home"></div>
+          <p>Prepare your home to help the pet adjust to new family.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footer-content" id="content-letter">
+        <h1 class="logo" style="font-size: 54px;">PETIER</h1>
+        <div class="newsletter">
+          <div class="new">
+            <p>Subscribe to our </p><span id="news-logo">newsletter</span>
+          </div>
+          <input type="email" placeholder="Enter Gmail" id="news-mail" style="margin-top: 60px; position: absolute;">
+        </div>
+      </div>
+      <div class="footer-content" id="content-prod">
+        <h1 class="product">Products</h1>
+        <ul class="product-list">
+          <li>Accessories</li>
+          <li>Pet</li>
+          <li>Pet Food</li>
+          <li>Pet Care</li>
+        </ul>
+      </div>
+      <div class="footer-content" id="content-comp">
+        <h1 class="product">Company</h1>
+        <ul class="product-list">
+          <li>About Us</li>
+          <li>Community</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="footer-content" id="content-cont">
+        <h1 class="product">Contact us</h1>
+        <ul class="product-list">
+          <li>+91 8728457382</li>
+          <li>+91 9032495185</li>
+          <li>petierconnect@gamil.com</li>
+          <div class="socials">
+            <a href="#" class="social-icon"><img src="/imgs/pngs/instagram.png" style="height: 32px;"></a>
+            <a href="#" class="social-icon"><img src="/imgs/pngs/linkedin.png" style="height: 32px;"></a>
+            <a href="#" class="social-icon"><img src="/imgs/pngs/github.png" style="height: 32px;"></a>
+          </div>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
