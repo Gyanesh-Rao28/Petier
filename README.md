@@ -1,4 +1,4 @@
 # Petier
 
 on going project
-visit:- //
+visit:- https://gyanesh-rao28.github.io/Petier/
