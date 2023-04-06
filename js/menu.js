@@ -33,21 +33,22 @@ const slider = () => {
   });
 };
 
-
 // test
 
 // btn switch
 
-const menuFilter = document.getElementById("menu-filter");
-const menuBtn = document.querySelectorAll(".menu-btn");
+// const menuFilter = document.getElementById("menu-filter");
+// const menuBtn = document.querySelectorAll(".filter-btn");
 
-menuBtn.forEach((btn)=>{
-  btn.addEventListener('click',()=>{
-    btn.classList.add("selected");
-  })
-})
+// menuBtn.forEach((btn)=>{
+//   btn.addEventListener('click',()=>{
+//     btn.classList.add("selected");
+//   })
+// })
 
-// menu 
+// menu section
+
+// menu array
 
 const menu = [
   {
@@ -88,55 +89,112 @@ const menu = [
   },
   {
     id: 5,
-    category: "dog",
-    breed: "DOG",
-    age: "2 yr",
-    location: "mumbai",
-    img: "./imgs/dogs/dog5.jpg",
-    gender: `Female`,
-  },
-  {
-    id: 6,
-    category: "dog",
-    breed: "DOG",
-    age: "2 yr",
-    location: "mumbai",
-    img: "./imgs/dogs/dog6.jpg",
-    gender: `Female`,
-  },
-  {
-    id: 7,
-    category: "dog",
-    breed: "DOG",
+    category: "cat",
+    breed: "CAT",
     age: "2 yr",
     location: "mumbai",
     img: "./imgs/cat/cat1.jpg",
     gender: `Female`,
   },
+  {
+    id: 6,
+    category: "bird",
+    breed: "BIRD",
+    age: "2 yr",
+    location: "mumbai",
+    img: "./imgs/bird/bird1.jpg",
+    gender: `Female`,
+  },
+  {
+    id: 7,
+    category: "food",
+    breed: "DOG",
+    age: "2 yr",
+    location: "mumbai",
+    img: "./imgs/food/food1.jpg",
+    gender: `Female`,
+  },
 ];
 
-
 const menuSection = document.getElementById("menu-grid");
+const menuFilter = document.getElementById("menu-filter");
 
-window.addEventListener("DOMContentLoaded",function (){
+// btn switch
 
-let displayMenu = menu.map((item)=>{
+// function glow(category) {
+//   filterBtn.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       console.log(btn.innerHTML, category);
+//       btn.classList.add("selected");
+//     });
+//   });
+// }
 
-  return `<div class="menu-box">
+// loading
+
+window.addEventListener("DOMContentLoaded", function () {
+  displayMenuPet(menu);
+
+  const categories = menu.reduce(
+    (value, item) => {
+      if (!value.includes(item.category)) {
+        value.push(item.category);
+      }
+      return value;
+    },
+    ["all"]
+  );
+
+  const categoryBtn = categories
+    .map((category) => {
+      return `<li class="filter-btn" data-id=${category}>${category}</li>`;
+    })
+    .join("");
+
+  menuFilter.innerHTML = categoryBtn;
+
+  const filterBtn = document.querySelectorAll(".filter-btn");
+
+  // filter-menu-btn
+  filterBtn.forEach((btn) => {
+    // console.log(btn);
+    btn.addEventListener("click", (e) => {
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter((pet) => {
+        if (pet.category == category) {
+          return category;
+        }
+      });
+      if (category == "all") {
+        displayMenuPet(menu);
+      } else {
+        displayMenuPet(menuCategory);
+      }
+
+      btn.classList.add("selected"); // to be continued
+    });
+  });
+});
+
+// displayMenu function
+
+function displayMenuPet(menuPet) {
+  let displayMenu = menuPet.map((pet) => {
+    return `<div class="menu-box" data-aos="zoom-in-up">
           <div class="box-img">
-            <img src=${item.img} class="photo">
+            <img src=${pet.img} class="photo">
           </div>
           <div class="menu-des">
-            <p>Breed - ${item.breed}</p>
-            <p>Age - ${item.age}</p>
-            <p>Location - ${item.location}</p>
-            <p>Gender - ${item.gender}</p>
+            <p>Breed - ${pet.breed}</p>
+            <p>Age - ${pet.age}</p>
+            <p>Location - ${pet.location}</p>
+            <p>Gender - ${pet.gender}</p>
             <button class="menu-more"><img src="/imgs/pngs/arrow.png" style="transform: rotate(-180deg);"></button>
           </div>
         </div>`;
+  });
+  displayMenu = displayMenu.join("");
+  menuSection.innerHTML = displayMenu;
+}
 
-});
 
-displayMenu = displayMenu.join("");
-menuSection.innerHTML = displayMenu;
-})
