@@ -33,20 +33,6 @@ const slider = () => {
   });
 };
 
-// test
-
-// btn switch
-
-// const menuFilter = document.getElementById("menu-filter");
-// const menuBtn = document.querySelectorAll(".filter-btn");
-
-// menuBtn.forEach((btn)=>{
-//   btn.addEventListener('click',()=>{
-//     btn.classList.add("selected");
-//   })
-// })
-
-// menu section
 
 // menu array
 
@@ -108,10 +94,19 @@ const menu = [
   {
     id: 7,
     category: "food",
-    breed: "DOG",
+    breed: "food",
     age: "2 yr",
     location: "mumbai",
     img: "./imgs/food/food1.jpg",
+    gender: `Female`,
+  },
+  {
+    id: 8,
+    category: "bird",
+    breed: "BIRD",
+    age: "2 yr",
+    location: "mumbai",
+    img: "./imgs/bird/bird2.jpg",
     gender: `Female`,
   },
 ];
@@ -170,7 +165,7 @@ window.addEventListener("DOMContentLoaded", function () {
       } else {
         displayMenuPet(menuCategory);
       }
-
+      // console.log(btn, category);
       btn.classList.add("selected"); // to be continued
     });
   });
@@ -198,3 +193,79 @@ function displayMenuPet(menuPet) {
 }
 
 
+
+// more content
+
+
+
+const loadMore = document.getElementById("load-btn");
+loadMore.addEventListener("click",()=>{
+  menu.push(
+    {
+      id: 9,
+      category: "cat",
+      breed: "CAT",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/cat/cat2.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 10,
+      category: "dog",
+      breed: "DOG",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/dogs/dog6.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 11,
+      category: "cat",
+      breed: "CAT",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/cat/cat3.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 12,
+      category: "bird",
+      breed: "BIRD",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/bird/bird3.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 13,
+      category: "cat",
+      breed: "CAT",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/cat/cat4.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 14,
+      category: "food",
+      breed: "food",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/food/food2.jpg",
+      gender: `Female`,
+    },
+    {
+      id: 15,
+      category: "dog",
+      breed: "DOG",
+      age: "2 yr",
+      location: "mumbai",
+      img: "./imgs/dogs/dog5.jpg",
+      gender: `Female`,
+    }
+  );
+
+  displayMenuPet(menu);
+    
+})
