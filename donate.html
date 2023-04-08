@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="css/donate.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="landing-page">
+        <nav class="navbar">
+            <div class="logo">Petier</div>
+            <ul class="nav-center">
+                <li><a href="index.html" class="nav-btn">Home</a></li>
+                <li><a href="menu.html" class="nav-btn">Adopt</a></li>
+                <li><a href="menu.html" class="nav-btn">Food</a></li>
+                <li><a href="donate.html" class="nav-btn">Donate</a></li>
+            </ul>
+            <div class="login">
+                <button id="login-btn">Login/SignUp</button>
+            </div>
+        </nav>
+
+        <section class="content">
+            <div class="content-inner form-content">
+                <h1 id="donate">Donate</h1>
+
+                <form>
+                    <label for="breed">Breed Name</label>
+                    <input type="text" id="breed" name="Breed" placeholder="Pet Breed..">
+
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                    </select>
+
+                    <label for="age">Age</label>
+                    <select id="age" name="age">
+                        <option value="1yr">1yr</option>
+                        <option value="2yr">2yr</option>
+                        <option value="3yr">3yr</option>
+                    </select>
+
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="bengaluru">Bengaluru</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+
+                    <label for="myfile">Select a file:</label>
+                    <input type="file" id="myfile" name="myfile">
+
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
+            <div class="content-inner img-content">
+                <div class="fit">
+                    <img id="photo" src="/imgs/dogs/dog7.jpg">
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+
+</html>
