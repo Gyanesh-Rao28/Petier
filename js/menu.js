@@ -2,7 +2,7 @@ const slides = document.querySelectorAll(".slide");
 const leftBtn = document.getElementById("left-btn");
 const rightBtn = document.getElementById("right-btn");
 
-counter = 0;
+let counter = 0;
 
 slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
@@ -33,8 +33,7 @@ const slider = () => {
   });
 };
 
-
-// menu array
+// ----------------------------------menu array------------------------------------------
 
 const menu = [
   {
@@ -110,6 +109,7 @@ const menu = [
     gender: `Female`,
   },
 ];
+
 
 const menuSection = document.getElementById("menu-grid");
 const menuFilter = document.getElementById("menu-filter");
@@ -192,14 +192,10 @@ function displayMenuPet(menuPet) {
   menuSection.innerHTML = displayMenu;
 }
 
-
-
 // more content
 
-
-
 const loadMore = document.getElementById("load-btn");
-loadMore.addEventListener("click",()=>{
+loadMore.addEventListener("click", () => {
   menu.push(
     {
       id: 9,
@@ -267,5 +263,4 @@ loadMore.addEventListener("click",()=>{
   );
 
   displayMenuPet(menu);
-    
-})
+});
